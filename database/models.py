@@ -10,8 +10,8 @@ import logging
 from logging import Formatter, FileHandler
 
 database_name = "capstone"
-database_path = "postgres://{}/{}".format('localhost:5432', database_name)
-
+# database_path = "postgres://{}/{}".format('localhost:5432', database_name)
+database_path = postgres://caknuwumdnhotv:f62e05a5f053a9dc285c19d0b1d44c67de283b1d05923b39f41f9607113082f7@ec2-34-197-188-147.compute-1.amazonaws.com:5432/ddebgjg37tjl5j
 db = SQLAlchemy()
 
 '''
