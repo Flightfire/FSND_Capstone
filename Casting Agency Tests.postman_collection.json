@@ -124,7 +124,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -156,14 +159,18 @@
 					"request": {
 						"method": "PATCH",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -190,12 +197,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -222,12 +230,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -254,12 +263,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -293,16 +303,6 @@
 						}
 					],
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"body": {},
@@ -374,7 +374,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -405,8 +408,16 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Titanic\",\n    \"release_date\": \"2007-05-08 12:35:29.123\"\n}"
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -440,12 +451,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -472,12 +484,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -504,12 +517,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -536,12 +550,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -553,7 +568,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImowT1oxaHVZN0duXzU2Q0NITDU5biJ9.eyJpc3MiOiJodHRwczovL3Rlc3R5dGVzdGVyeXNvbi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwYjc3ZWU3MTQ2OGMwMDEzMDAxYWI1IiwiYXVkIjoiQ2FzdGluZyBBZ2VuY3kiLCJpYXQiOjE1OTQ2ODY0NTEsImV4cCI6MTU5NDY5MzY1MSwiYXpwIjoiNnNoR0lXWWNpV2dkZVNMaTlhQzRLMVhmSDBLdVN6S2IiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.MaWtqam6beDcET9fjYT3znpJvEXu3ttVOWhBSWudPOioKWMRcjTnd_fWyIdiq9DuA6bAhP_qFrFjWpLI-zDzZjj3QPCmjs9gCcA16VY8MMFyxzMVylOBirSPdquGP-6Uf8pQNxg8sR6Ln4O3WsSK_2coe7Vh8H4CD8sM7CiyGTzOvEBHiUoz7I_jG7L8YUJMfvfuB5BpwX9WGx57fMnbXdvrM2umdTvn37vX8R9a-OtDmZupiSNQKln4EWQPwR9oftTzjRK8_IjfZKDk6PjD1RTF9u5onBa_no8TIiL5sRtRP-cm3WyoIOlK3bqWf7WtiN3BK1Op9YJ7qWCxixNgWg",
 						"type": "string"
 					}
 				]
@@ -607,16 +622,6 @@
 						}
 					],
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"body": {},
@@ -687,8 +692,16 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tom Hanks\",\n    \"age\": 46,\n    \"gender\": \"Male\"\n}"
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -719,8 +732,16 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Titanic\",\n    \"release_date\": \"2007-05-08 12:35:29.123\"\n}"
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -739,32 +760,37 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3d0a11d8-95a3-484b-9f88-220c91952e36",
+								"id": "8e7acb27-69c1-40f4-9e3a-078bd8d836d0",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"",
-									"pm.test(\"value contains actors array\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.actors).to.be.an('array')",
-									"});"
+									""
 								]
 							}
 						}
 					],
 					"request": {
 						"method": "PATCH",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tom Hanks\",\n    \"age\": 47,\n    \"gender\": \"Male\"\n}"
+						},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -776,32 +802,37 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cb49d630-502c-48e1-b7b4-2da9991be84b",
+								"id": "e9a36890-3c74-467e-9ed9-93b973774e3b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"",
-									"pm.test(\"value contains movies array\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.movies).to.be.an('array')",
-									"});"
+									""
 								]
 							}
 						}
 					],
 					"request": {
 						"method": "PATCH",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Titanic 2\",\n    \"release_date\": \"2007-05-08 12:35:29.123\"\n}"
+						},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -830,12 +861,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"1"
 							]
 						}
 					},
@@ -862,12 +894,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"1"
 							]
 						}
 					},
@@ -879,7 +912,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImowT1oxaHVZN0duXzU2Q0NITDU5biJ9.eyJpc3MiOiJodHRwczovL3Rlc3R5dGVzdGVyeXNvbi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwYzY4OWUyZWIzMDMwMDE5Yzg2Y2M5IiwiYXVkIjoiQ2FzdGluZyBBZ2VuY3kiLCJpYXQiOjE1OTQ2ODY1MzUsImV4cCI6MTU5NDY5MzczNSwiYXpwIjoiNnNoR0lXWWNpV2dkZVNMaTlhQzRLMVhmSDBLdVN6S2IiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIl19.GmVA9nnujFJ1VfvR7y7V6NQM2RsxlafxjpTi0tKcbK_OfZ_5VEFOkcx-PSij5TmCIKNWVqyo-rSu-arUbU9jKuzfYhfBeCf_r25wtCvA4oanqo7Ifjod0xBlQYbGT8YHXWf7R9RC9t6Ar3MYTdH-3H0qY2edEeQkUFXNVvFHEpt9Bx3PTNpInqHLpmqQz_KM7iTUKHWbh1ZS9Indt16B0DJkKVsen8Kfn00dLAYiXpnsL0sl3gmLBNmLQPGhYlDjCdoqn4j1FuoMB9LyeXkgDNDyn8DQSHs_kvL5Eu4ROGCNrg8tvwRcoUg74tplAp6R740HFHEp4HrHkAox68wuog",
 						"type": "string"
 					}
 				]
@@ -933,16 +966,6 @@
 						}
 					],
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"body": {},
@@ -1013,8 +1036,16 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Olivia Munn\",\n    \"age\": 33,\n    \"gender\": \"Female\"\n}"
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -1033,7 +1064,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "eb9f7102-744d-4d2c-a740-d168d3d28189",
+								"id": "03c0e785-b9fd-4686-8ea5-9bc6986de2e8",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
@@ -1045,8 +1076,16 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bourne Identity\",\n    \"release_date\": \"2007-06-08 12:35:29.123\"\n}"
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -1065,32 +1104,37 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3d0a11d8-95a3-484b-9f88-220c91952e36",
+								"id": "8e7acb27-69c1-40f4-9e3a-078bd8d836d0",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"",
-									"pm.test(\"value contains actors array\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.actors).to.be.an('array')",
-									"});"
+									""
 								]
 							}
 						}
 					],
 					"request": {
 						"method": "PATCH",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tom Hanks\",\n    \"age\": 47,\n    \"gender\": \"Male\"\n}"
+						},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"2"
 							]
 						}
 					},
@@ -1102,32 +1146,37 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cb49d630-502c-48e1-b7b4-2da9991be84b",
+								"id": "e9a36890-3c74-467e-9ed9-93b973774e3b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"",
-									"pm.test(\"value contains movies array\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.movies).to.be.an('array')",
-									"});"
+									""
 								]
 							}
 						}
 					],
 					"request": {
 						"method": "PATCH",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Titanic 2\",\n    \"release_date\": \"2007-05-08 12:35:29.123\"\n}"
+						},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"2"
 							]
 						}
 					},
@@ -1156,12 +1205,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/actors",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"actors"
+								"actors",
+								"2"
 							]
 						}
 					},
@@ -1173,7 +1223,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "82825d3a-790e-4d95-9717-1328d2b1002c",
+								"id": "79df4ceb-8daa-4e33-9abf-93a8088908dc",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
@@ -1188,12 +1238,13 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{host}}/movies",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"movies"
+								"movies",
+								"2"
 							]
 						}
 					},
@@ -1205,7 +1256,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InFpMVA2ekIwZzhvQUdvYTBiRGVPRyJ9.eyJpc3MiOiJodHRwczovL2ZsaWdodGZpcmUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDk3MzVhYTM2ZWIyMDAxOTc2YWJhYyIsImF1ZCI6IkNvZmZlZSBTaG9wIiwiaWF0IjoxNTkxNTgzOTY0LCJleHAiOjE1OTE1OTExNjQsImF6cCI6ImNBdmpLWVlpVnBZSnBheGVrTDZobUFqVGJTQUo1UXAwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzLWRldGFpbCJdfQ.yQoq7ejyywtVy83ScjupcNMozt0oetbXnNndpxOsT6yX3MLihfFxOK6EXPpnCDcKa5KXc7rC-g8bgDf3jS46pChjndjW_R1QXxNklue-hmje_3oIaxONwDXg9qWJGguVG4NiFCyW7MbikGannJXbqAXhgfT1xDpXgrwW9DXjKmURWuA-7ihDziCqaRkN4FRdP0SIDnQkc1C4Nd3pjYZFSaVR2QktOhVcBv0plPasadK8adrNDOr0JD8DBBzc4M0oLzLKZXhBSWmsW_hi4dq0ICGEU_Dl4WKgxBtluOpnV00M0VNxJcAg8lmC0Lz9raqtcxD0aMzkCvnl8lRlrsx3MA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImowT1oxaHVZN0duXzU2Q0NITDU5biJ9.eyJpc3MiOiJodHRwczovL3Rlc3R5dGVzdGVyeXNvbi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwYzlmNTRhMTViN2IwMDEzNjIxYTg4IiwiYXVkIjoiQ2FzdGluZyBBZ2VuY3kiLCJpYXQiOjE1OTQ3NzM4NjIsImV4cCI6MTU5NDc4MTA2MiwiYXpwIjoiNnNoR0lXWWNpV2dkZVNMaTlhQzRLMVhmSDBLdVN6S2IiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.D0N5ud42oe1ith7YzN7ZxAXgAaIHS1QVTJ6CopumYIrLM7478immCl0QaCDqJaFbz8TU8OlvpnIvw1631cXZMGAf9tUzlmOPLhGfx9Ak1HUrrodof9ogmNLlUlDJWCDlfXPts_W7MVN-KEvaymnYD6EEz5Ep_KMKECyE6izSVw4paUOU880xT4fQ6XkScwqgJOx5QVlQthdfM7C0kn49lKscecVdC5S5R223GAQ-aZI6kep8quVoA6pidGL-mwM6yEyUdH1_Zq-MaOx2JE7U-Nn9oVp6-YMmnLlwWFgb_jZxVVWPfaXmVpqO0_9BMLJFHcUu8anC_ORxUND2UUMHTw",
 						"type": "string"
 					}
 				]
@@ -1258,7 +1309,7 @@
 	],
 	"variable": [
 		{
-			"id": "b8430c96-7d59-4147-ac51-3d882376a858",
+			"id": "422a03d6-0033-4885-a8fe-90f31185ac8f",
 			"key": "host",
 			"value": "localhost:5000",
 			"type": "string",

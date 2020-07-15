@@ -12,6 +12,8 @@ babel
 python-dateutil==2.6.0
 flask-moment
 flask-wtf
+flask_script
+gunicorn==20.0.4
 Werkzeug==0.15.3 
 wrapt==1.11.1
 bleach==3.1.5
