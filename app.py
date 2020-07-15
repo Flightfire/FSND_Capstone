@@ -13,7 +13,7 @@ from authorization.auth import AuthError, requires_auth
 # -------------------------------------------------------------------------------
 app = Flask(__name__)
 db = setup_db(app)
-migrate = Migrate(app, db)
+# migrate = Migrate(app, db)
 
 CORS(app, resources={r"*": {"origins": "*"}})
 
