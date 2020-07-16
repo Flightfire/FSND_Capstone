@@ -1,12 +1,13 @@
-# FULL STACK TRIVIA
+# CASTING AGENCY CAPSTONE
 
-Welcome to the Capstone Casting Agency API. This is a backend api designed to facilitate casting assistants, casting directors and executive directors as they create, read, update and delete movies and actors. 
+Welcome to the Capstone Casting Agency API. This is a backend API designed to facilitate casting assistants, casting directors and executive directors as they create, read, update and delete movies and actors. 
 
 ## Getting Started
-**Note:** This app requires python3, pip, virualenv and psql. Please download these dependencies before proceeding.
+**Note:** This app requires python3, pip, virualenv, and Postman. Please download these dependencies before proceeding.
 
-<!-- 1. Download the zip files provided with this submission and cd into the starter folder.
-2. Create a virutal environement
+### Local Startup
+1. Download the zip files provided with this submission and cd into the starter folder.
+2. Create and activate a virutal environement
     ```bash
     python3 -m venv env
     ```
@@ -18,37 +19,35 @@ Welcome to the Capstone Casting Agency API. This is a backend api designed to fa
     ```bash
     pip install -r requirements.txt
     ```
-4. Create a new trivia database with the following commands.
+4. Create a new "capstone" database with the following commands.
 
     ```
-    psql create database trivia
-    ```
-    ```
-    psql trivia < trivia.psql
+    psql create database capstone
     ```
 
-5. Install Node package manager for the front-end.
+5. Upgrade the database with flask-migrate.
 
     ```bash
-    npm install
+    flask db upgrade
     ```
 
 6. Start the backend.
 
     ```bash
-    export FLASK_APP=flaskr
+    export FLASK_APP=app.py
     flask run
     ```
 
-7. Start the front end.
-    ```bash
-    npm start
-    ```  -->
-## Testing
 
-This api is equipped with a fully-functional Postman testing suite for all API endpoints. Just run the `Casting Agency Tests.postman_collection.json` file in Postman. 
+### Testing
+
+1. Local: This api is equipped with a fully functional Postman testing suite for all API endpoints. Just run the `Casting Agency Tests.postman_collection.json` file in Postman.
+
+2. Deployed: If you wish to test the heroku app with this postman collection, edit the "host" variable key to have the value `flightfire-casting-agency.herokuapp.com/`
 
 **Note:** You will need to set up the JSON Web Tokens (JWT's) for each role. Please see Auth0 login information provided with submission to obtain the JWTs. 
+
+**Note:** You may encounter some 404 errors with certain endpoints while testing as it is impossible to anticipate the current id's of the database objects. Please change the <id> values in the url's individually after obtaining id's from GET requests.
 
 
 ## Error Handling

@@ -13,6 +13,7 @@ python-dateutil==2.6.0
 flask-moment
 flask-wtf
 flask_script
+python-dotenv
 gunicorn==20.0.4
 Werkzeug==0.15.3 
 wrapt==1.11.1

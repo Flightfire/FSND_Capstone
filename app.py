@@ -4,16 +4,19 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import logging
+from datetime import datetime, date
+from dateutil.parser import parse
 from logging import Formatter, FileHandler
 from database.models import setup_db, Movie, Actor
+from config.config import TestingConfig, LocalConfig
 from authorization.auth import AuthError, requires_auth
 
 # -------------------------------------------------------------------------------
 # SETUP
 # -------------------------------------------------------------------------------
 app = Flask(__name__)
+app.config.from_object(LocalConfig)
 db = setup_db(app)
-# migrate = Migrate(app, db)
 
 CORS(app, resources={r"*": {"origins": "*"}})
 
@@ -43,9 +46,7 @@ def login():
 @app.route('/actors')
 @requires_auth(permission='get:actors')
 def get_actors(payload):
-    print('authorized')
     actors = Actor.query.order_by('id').all()
-    print(actors)
     if actors is None:
         abort(404)
     else:
@@ -81,12 +82,18 @@ def add_actor(payload):
     age = req_data['age']
     gender = req_data['gender']
 
+    # Check if age is integer
+    if type(age) is int:
+        pass
+    else:
+        abort(422)
     # Create new
     newActor = Actor(
         name=name,
         age=age,
         gender=gender
     )
+    
     # Save
     try:
         newActor.insert()
@@ -109,7 +116,8 @@ def add_movie(payload):
     req_data = request.get_json()
     title = req_data['title']
     release_date = req_data['release_date']
-
+    check_movie_values(title, release_date)
+    
     # Create new
     new_movie = Movie(
         title=title,
@@ -144,6 +152,12 @@ def update_actor(payload, id):
     name = req_data['name']
     age = req_data['age']
     gender = req_data['gender']
+
+    if type(age) is int:
+        pass
+    else:
+        abort(422)
+
     # Update data
     actor.name = name
     actor.age = age
@@ -174,6 +188,8 @@ def update_movie(payload, id):
     req_data = request.get_json()
     title = req_data['title']
     release_date = req_data['release_date']
+    check_movie_values(title, release_date)
+
     # Update data
     movie.title = title
     movie.release_date = release_date
@@ -272,6 +288,32 @@ def server_error(error):
 
 # Helper
 
+def check_movie_values(title, release_date):
+    #check if title is string
+    if isinstance(title, str):
+        pass
+    else:
+        abort(422)
+
+    #check if release_date can be parsed to datetime
+    if is_date(release_date):
+        pass
+    else:
+        abort(422)
+
+def is_date(string, fuzzy=False):
+    """
+    Return whether the string can be interpreted as a date.
+
+    :param string: str, string to check for date
+    :param fuzzy: bool, ignore unknown tokens in string if True
+    """
+    try: 
+        parse(string, fuzzy=fuzzy)
+        return True
+
+    except ValueError:
+        return False
 
 def get_error_message(error, message):
     description = error['description']
