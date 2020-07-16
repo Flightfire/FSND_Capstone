@@ -9,6 +9,16 @@ class Config:
     """Base config."""
     SQLALCHEMY_TRACK_MODIFICATIONS = False   
 
+
+class HerokuConfig(Config):
+    FLASK_ENV = 'production'
+    DEBUG = False
+    TESTING = False
+    SQLALCHEMY_DATABASE_URI = 'postgres://caknuwumdnhotv: \
+        f62e05a5f053a9dc285c19d0b1d44c67de283b1d05923b39f41f9607113082f7 \
+        @ec2-34-197-188-147.compute-1.amazonaws.com:5432/ddebgjg37tjl5j'
+
+
 class TestingConfig(Config):
     database_name = "capstone_test"
     database_path = "postgres://{}/{}".format('localhost:5432', database_name)
