@@ -8,7 +8,7 @@ from datetime import datetime, date
 from dateutil.parser import parse
 from logging import Formatter, FileHandler
 from database.models import setup_db, Movie, Actor
-from config.config import TestingConfig, LocalConfig
+from config.config import TestingConfig, LocalConfig, HerokuConfig
 from authorization.auth import AuthError, requires_auth
 
 # -------------------------------------------------------------------------------
