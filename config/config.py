@@ -14,9 +14,7 @@ class HerokuConfig(Config):
     FLASK_ENV = 'production'
     DEBUG = False
     TESTING = False
-    SQLALCHEMY_DATABASE_URI = 'postgres://caknuwumdnhotv: \
-        f62e05a5f053a9dc285c19d0b1d44c67de283b1d05923b39f41f9607113082f7 \
-        @ec2-34-197-188-147.compute-1.amazonaws.com:5432/ddebgjg37tjl5j'
+    SQLALCHEMY_DATABASE_URI = 'postgres://mevbyboisflhuq:b9c9ced992f351ef3bfbf89f8ceae103bba9da91a97cfcddd95fc8dedd546de6@ec2-54-161-208-31.compute-1.amazonaws.com:5432/dr3qdbni44hkv'
 
 
 class TestingConfig(Config):
