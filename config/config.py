@@ -14,7 +14,7 @@ class HerokuConfig(Config):
     FLASK_ENV = 'production'
     DEBUG = False
     TESTING = False
-    SQLALCHEMY_DATABASE_URI = 'postgres://rpqukyrwefnexz:a2c8e358006e2915ca776dd18ca4ae79a7192cb108aa8ee95805ff1abec0645a@ec2-34-202-7-83.compute-1.amazonaws.com:5432/d1t170ta0skouh'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('HEROKU_POSTGRESQL_BLUE_URL')
 
 
 class TestingConfig(Config):
