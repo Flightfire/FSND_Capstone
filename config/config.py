@@ -14,7 +14,7 @@ class HerokuConfig(Config):
     FLASK_ENV = 'production'
     DEBUG = False
     TESTING = False
-    SQLALCHEMY_DATABASE_URI = 'HEROKU_POSTGRESQL_BLUE_URL'
+    SQLALCHEMY_DATABASE_URI = os.environ['HEROKU_POSTGRESQL_BLUE_URL']
 
 
 class TestingConfig(Config):
