@@ -15,7 +15,7 @@ from authorization.auth import AuthError, requires_auth
 # SETUP
 # -------------------------------------------------------------------------------
 app = Flask(__name__)
-app.config.from_object(HerokuConfig)
+app.config.from_object(LocalConfig)
 db = setup_db(app)
 
 CORS(app, resources={r"*": {"origins": "*"}})
