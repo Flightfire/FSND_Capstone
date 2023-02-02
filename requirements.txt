@@ -15,6 +15,6 @@ flask-wtf
 flask_script
 python-dotenv
 gunicorn==20.0.4
-Werkzeug==0.15.3 
+Werkzeug==0.15.5 
 wrapt==1.11.1
 bleach==3.1.5
